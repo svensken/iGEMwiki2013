@@ -35,8 +35,15 @@ a:hover {
 
 .container > header {
 	margin: 0 auto;
-	/*max-width: 69em;
-	padding: 2.875em 1.875em 1.875em;*/
+	position: relative;
+	max-width: 69em;
+	padding: 2.875em 1.875em 1.875em;
+}
+
+.container > header img {
+	margin: 0 auto;
+	width: 100%;
+	text-align: center;
 }
 
 .main {
