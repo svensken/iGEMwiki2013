@@ -47,7 +47,7 @@ a:hover {
 }
 
 .main {
-	width: 90%;
+	width: 80%;
 	padding: 1em;
 	margin: 0 auto;
 }
@@ -59,7 +59,33 @@ a:hover {
 	font-weight: 400;
 }
 
+#sidebar ul {
+	list-style: none;
+	background: black;
+	border: 1px solid white;
+	padding: 5px;
+}
+#sidebar li {
+	color: black;
+	margin: 0 0 0 10px;
+}
+#sidebar {
+	width: 100px;
+	position: fixed;
+	left: 0;
+	top: 35%;
+	margin: 0 0 0 0px;
+	z-index: 5;
+}
+#sidebar a:hover {
+	color: red;
+}
+
 @media screen and (max-width: 55em) {
+
+	#sidebar {
+		display: none;
+	}
 
 	.container > header h1,
 	.container > header nav {

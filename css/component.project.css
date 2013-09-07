@@ -1,79 +1,29 @@
-@font-face {
-	font-family: 'anyoldicon';
-	src:url('../fonts/anyoldicon/any-old-icon.eot');
-	src:url('../fonts/anyoldicon/any-old-icon.eot?#iefix') format('embedded-opentype'),
-		url('../fonts/anyoldicon/any-old-icon.woff') format('woff'),
-		url('../fonts/anyoldicon/any-old-icon.ttf') format('truetype'),
-		url('../fonts/anyoldicon/any-old-icon.svg#anyoldicon') format('svg');
-	font-weight: normal;
-	font-style: normal;
-}
-
-/* Windows Chrome ugly fix http://stackoverflow.com/questions/13674808/chrome-svg-font-rendering-breaks-layout/14345363#14345363 */
-@media screen and (-webkit-min-device-pixel-ratio:0) {
-	@font-face {
-		font-family: 'anyoldicon';
-		src: url('../fonts/anyoldicon/any-old-icon.svg#anyoldicon') format('svg');
-	};
-}
-
-.icon-project, .icon-team, .icon-modelling, .icon-sponsors, .icon-notebook, .icon-outreach, .icon-menu {
-	font-family: 'anyoldicon';
-	speak: none;
-	font-style: normal;
-	font-weight: normal;
-	font-variant: normal;
-	text-transform: none;
-	line-height: 1;
-	-webkit-font-smoothing: antialiased;
-}
-
-.icon-project:before {
-	content: "\e011";
-}
-
-.icon-team:before {
-	content: "\e02f";
-}
-
-.icon-modelling:before {
-	content: "\e02d";
-}
-
-.icon-sponsors:before {
-	content: "\e00f";
-}
-
-.icon-notebook:before {
-	content: "\e00b";
-}
-
-.icon-outreach:before {
-	content: "\e041";
-}
-
-.icon-menu:before {
-	content: "\e033";
-}
-
-a, li {
-	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
-}
-
 
 /* Global CSS that are applied for all screen sizes */
 
-.nav ul {
-	max-width: 700px;/*1240px;*/
-	margin: 30px auto 0 auto;
-	padding: 0;
-	list-style: none;
-	font-size: 1.1em;
-	font-weight: 300;
+.subject {
+	margin-bottom: 40px;
 }
-
-.nav li span {
-	display: block;
+.subject h1 {
+	text-shadow: -1px -1px 1px gray;
+}
+.inner-subject {
+	background: #ccc;
+	padding: 20px 25px;
+}
+/*http://codepen.io/Merri/pen/HBvlh*/
+.line {
+	display: table;
+	white-space: nowrap;
+}
+.line:before,
+.line:after {
+	/* green 1px image repeated in browsers without linear-gradient */
+	background: url(data:image/gif;base64,R0lGODdhAQABAIgAAEqMMQAAACwAAAAAAQABAAACAkQBADs=) repeat-x center;
+	background: linear-gradient(to bottom, #304831, #2D7D44) no-repeat center / 98% .1em;
+	content: '';
+	display: table-cell;
+	width: 50%;
 }
 
 .nav a {

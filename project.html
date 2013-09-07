@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+		<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+		<title>Rutgers project</title>
+		<meta name="description" content="Rutgers iGEM 2013 project" />
+		<link rel="shortcut icon" href="../favicon.ico">
+		<link rel="stylesheet" type="text/css" href="css/default.css" />
+		<link rel="stylesheet" type="text/css" href="css/component.project.css" />
+		<link rel="stylesheet" type="text/css" href="css/component.menu.css" />
+		<script src="js/modernizr.custom.js"></script>
+		<script src="js/jquery-1.10.2.min.js"></script>
+		<script src="js/stickyMojo.js"></script>
+	</head>
+	<body>
+		<div class="container">
+			<header class="clearfix">
+				<a href="index.html"><img src="knight.png"></a>
+				<nav id="menu" class="nav">					
+					<ul>
+						<li>
+							<a href="project.html" class="active">
+								<span class="icon">
+									<i aria-hidden="true" class="icon-project"></i>
+								</span>
+								<span>project</span>
+							</a>
+						</li>
+						<li>
+							<a href="team.html">
+								<span class="icon"> 
+									<i aria-hidden="true" class="icon-team"></i>
+								</span>
+								<span>team</span>
+							</a>
+						</li>
+						<li>
+							<a href="modelling.html">
+								<span class="icon">
+									<i aria-hidden="true" class="icon-modelling"></i>
+								</span>
+								<span>modelling</span>
+							</a>
+						</li>
+						<li>
+							<a href="sponsors.html">
+								<span class="icon">
+									<i aria-hidden="true" class="icon-sponsors"></i>
+								</span>
+								<span>sponsors</span>
+							</a>
+						</li>
+						<li>
+							<a href="notebook.html">
+								<span class="icon">
+									<i aria-hidden="true" class="icon-notebook"></i>
+								</span>
+								<span>notebook</span>
+							</a>
+						</li>
+						<li>
+							<a href="outreach.html">
+								<span class="icon">
+									<i aria-hidden="true" class="icon-outreach"></i>
+								</span>
+								<span>outreach</span>
+							</a>
+						</li>
+					</ul>
+				</nav>
+			</header>
+			<div id="sidebar">
+				<ul>
+					<!-- number the elements? how to make more obvious? -->
+				    <strong>
+				    	<li><a href="#abs">Abstract</a></li>
+				    </strong>
+				    <strong>
+					    <li><a href="#phI">Phase I</a></li>
+					</strong>
+				    <code>
+					    <li><a href="#lux"> -lux</a></li>
+					    <li><a href="#asd"> -asda</a></li>
+					    <li><a href="#lin"> -linker</a></li>
+					    <li><a href="#asI"> -assay</a></li>
+				    </code>
+				    <strong>
+					    <li><a href="#phII">Phase II</a></li>
+					</strong>
+				    <code>
+					    <li><a href="#Ros"> -Rosetta</a></li>
+					    <li><a href="#Fol"> -Foldit</a></li>
+					    <li><a href="#pro"> -protein</a></li>
+					    <li><a href="#asII"> -assay</a></li>
+				    </code>
+				</ul>	
+			</div>
+			<div class="main">
+				<div  class="subject">
+					<h1 id="abs" class="line">ABSTRACT</h1>
+					<div class="inner-subject">
+						<p>look at me, i'm an abstract</p>
+					</div>
+				</div>
+				<div  class="subject">
+					<h1 id="phI" class="line">PHASE I</h1>
+					<div class="inner-subject">
+						<p>look at me, i'm phase I</p>
+						<h2 id="lux" class="line">LUX OPERON</h2>
+						<p>luxxy lux</p>
+						<h2 id="asd" class="line">ASDA</h2>
+						<p>asda stuff</p>
+						<h2 id="lin" class="line">LINKER</h2>
+						<p>linker protein fluourescence</p>
+						<h2 id="asI" class="line">ASSAY</h2>
+						<p>results!</p>
+					</div>
+				</div>
+				<div  class="subject">
+					<h1 id="phII" class="line">PHASE II</h1>
+					<div class="inner-subject">
+						<p>look at me, i'm phase II</p>
+						<h2 id="Ros" class="line">ROSETTA</h2>
+						<p>lovely software indeed</p>
+						<h2 id="Fol" class="line">FOLDIT</h2>
+						<p>kinda like magic</p>
+						<h2 id="pro" class="line">MR DEEPAK PROTEIN</h2>
+						<p>mr deepak, mr deepak, we'd like for you to continue mutating residues</p>
+						<h2 id="asII" class="line">ASSAY</h2>
+						<p>more results!</p>
+					</div>
+				</div>
+			</div>
+		</div>
+		<script>
+			//  The function to change the class
+			var changeClass = function (r,className1,className2) {
+				var regex = new RegExp("(?:^|\\s+)" + className1 + "(?:\\s+|$)");
+				if( regex.test(r.className) ) {
+					r.className = r.className.replace(regex,' '+className2+' ');
+			    }
+			    else{
+					r.className = r.className.replace(new RegExp("(?:^|\\s+)" + className2 + "(?:\\s+|$)"),' '+className1+' ');
+			    }
+			    return r.className;
+			};	
+
+			//  Creating our button in JS for smaller screens
+			var menuElements = document.getElementById('menu');
+			menuElements.insertAdjacentHTML('afterBegin','<button type="button" id="menutoggle" class="navtoogle" aria-hidden="true" style="color:white"><i aria-hidden="true" class="icon-menu"> </i> Menu</button>');
+
+			//  Toggle the class on click to show / hide the menu
+			document.getElementById('menutoggle').onclick = function() {
+				changeClass(this, 'navtoogle active', 'navtoogle');
+			}
+
+			// http://tympanus.net/codrops/2013/05/08/responsive-retina-ready-menu/comment-page-2/#comment-438918
+			document.onclick = function(e) {
+				var mobileButton = document.getElementById('menutoggle'),
+					buttonStyle =  mobileButton.currentStyle ? mobileButton.currentStyle.display : getComputedStyle(mobileButton, null).display;
+
+				if(buttonStyle === 'block' && e.target !== mobileButton && new RegExp(' ' + 'active' + ' ').test(' ' + mobileButton.className + ' ')) {
+					changeClass(mobileButton, 'navtoogle active', 'navtoogle');
+				}
+			}
+		</script>
+	</body>
+</html>
