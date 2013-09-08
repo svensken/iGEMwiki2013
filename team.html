@@ -8,9 +8,58 @@
 		<meta name="description" content="Rutgers iGEM 2013 team" />
 		<link rel="shortcut icon" href="../favicon.ico">
 		<link rel="stylesheet" type="text/css" href="css/default.css" />
-		<link rel="stylesheet" type="text/css" href="css/component.slider.css" />
+		<link rel="stylesheet" type="text/css" href="css/component.featureslide.css" />
 		<link rel="stylesheet" type="text/css" href="css/component.menu.css" />
 		<script src="js/modernizr.custom.js"></script>
+		<script type="text/javascript" src="js/jquery-1.2.6.min.js"></script>
+		<script type="text/javascript" src="js/jquery-easing-1.3.pack.js"></script>
+		<script type="text/javascript" src="js/jquery-easing-compatibility.1.2.pack.js"></script>
+		<script type="text/javascript" src="js/coda-slider.1.1.1.pack.js"></script>
+		
+		<script type="text/javascript">
+		
+			var theInt = null;
+			var $crosslink, $navthumb;
+			var curclicked = 0;
+			
+			theInterval = function(cur){
+				clearInterval(theInt);
+				
+				if( typeof cur != 'undefined' )
+					curclicked = cur;
+				
+				$crosslink.removeClass("active-thumb");
+				$navthumb.eq(curclicked).parent().addClass("active-thumb");
+					$(".stripNav ul li a").eq(curclicked).trigger('click');
+				
+				theInt = setInterval(function(){
+					$crosslink.removeClass("active-thumb");
+					$navthumb.eq(curclicked).parent().addClass("active-thumb");
+					$(".stripNav ul li a").eq(curclicked).trigger('click');
+					curclicked++;
+					if( 6 == curclicked )
+						curclicked = 0;
+					
+				}, 3000);
+			};
+			
+			$(function(){
+				
+				$("#main-photo-slider").codaSlider();
+				
+				$navthumb = $(".nav-thumb");
+				$crosslink = $(".cross-link");
+				
+				$navthumb
+				.click(function() {
+					var $this = $(this);
+					theInterval($this.parent().attr('href').slice(1) - 1);
+					return false;
+				});
+				
+				theInterval();
+			});
+		</script>
 	</head>
 	<body>
 		<div class="container">
@@ -73,63 +122,90 @@
 				<a href="http://css-tricks.com/examples/AnythingSlider/#&panel1-4">
 					<h1>AnythingSlider (click me)</h1>
 				</a>
-				<div id="cbp-contentslider" class="cbp-contentslider">
-					<ul>
-						<li id="slide1">
-							<h3 class="icon-wolf">Wolf</h3>
-							<div>
-								<div class="cbp-content">
-									<p>Veggies sunt bona vobis, proinde vos postulo esse magis desert raisin bush tomato soko salsify garbanzo horseradish cabbage burdock.</p>
-									<p>Daikon artichoke gumbo azuki bean bok choy avocado winter purslane gram earthnut pea broccoli salsify squash plantain wattle seed wakame broccoli rabe bamboo shoot. Zucchini lotus root azuki bean epazote dulse pumpkin rutabaga spinach. Endive mung bean gumbo maize plantain rock melon.</p>
+				<a href="http://css-tricks.com/moving-boxes/">
+					<h1>Moving boxes</h1>
+				</a>
+				<div class="slider-wrap">
+					<div id="main-photo-slider" class="csw">
+						<div class="panelContainer">
+
+							<div class="panel" title="Panel 1">
+								<div class="wrapper">
+									<img src="images/6.jpg" alt="temp" />
+									<div class="photo-meta-data">
+										Photo Credit: <a href="http://flickr.com/photos/astrolondon/2396265240/">Kaustav Bhattacharya</a><br />
+										<span>"Free Tibet" Protest at the Olympic Torch Rally</span>
+									</div>
 								</div>
 							</div>
-						</li>
-						<li id="slide2">
-							<h3 class="icon-rabbit">Rabbit</h3>
-							<div>
-								<div class="cbp-content">
-									<p>Chicory collard greens tatsoi cress bamboo shoot broccoli rabe lotus root earthnut pea arugula okra welsh onion leek shallot courgette. Chard garlic fava bean pea sprouts gram spinach plantain tomatillo. Chicory garlic black-eyed pea gourd chickpea cucumber lotus root.</p>
-									<p>Daikon artichoke gumbo azuki bean bok choy avocado winter purslane gram earthnut pea broccoli salsify squash plantain wattle seed wakame broccoli rabe bamboo shoot. Zucchini lotus root azuki bean epazote dulse pumpkin rutabaga spinach. Endive mung bean gumbo maize plantain rock melon.</p>
+							<div class="panel" title="Panel 2">
+								<div class="wrapper">
+									<img src="images/2.jpg" alt="temp" />
+									<div class="photo-meta-data">
+										Chicago Bears at Seattle Seahawks<br />
+										<span>Fifth field goal, overtime win for the Seahawks</span>
+									</div>
+								</div>
+							</div>		
+							<div class="panel" title="Panel 3">
+								<div class="wrapper">
+									
+									<img src="images/3.jpg" alt="scotch egg" class="floatLeft"/>
+									
+									<h1>How to Cook a Scotch Egg</h1>
+									
+									<ul>
+										<li>6 hard-boiled eggs, well chilled (i try to cook them to just past soft boiled stage, then stick them in the coldest part of the fridge to firm up)</li>
+										<li>1 pound good quality sausage meat (i used ground turkey meat, seasoned with sage, white pepper, salt and a tiny bit of maple syrup)</li>
+										<li>1/2 cup AP flour</li>
+										<li>1-2 eggs, beaten</li>
+										<li>3/4 cup panko-style bread crumbs</li>
+										<li>Vegetable oil for frying</li>
+									</ul>
 								</div>
 							</div>
-						</li>
-						<li id="slide3">
-							<h3 class="icon-aligator">Aligator</h3>
-							<div>
-								<div class="cbp-content">
-									<p>Tomato shallot broccoli rabe aubergine melon fava bean soybean sorrel. Tomatillo plantain wattle seed pea ricebean sorrel fennel welsh onion kakadu plum celery. Arugula radicchio garlic welsh onion kale celtuce tomato fava bean beet greens soybean burdock groundnut lentil broccoli rabe.</p>
+							<div class="panel" title="Panel 4">
+								<div class="wrapper">
+									<img src="images/4.jpg" alt="temp" />
+									<div class="photo-meta-data">
+										A Poem by Shel Silverstein<br />
+										<span>Falling Up</span>
+									</div>
 								</div>
 							</div>
-						</li>
-						<li id="slide4">
-							<h3 class="icon-turtle">Turtle</h3>
-							<div>
-								<div class="cbp-content">
-									<p>Yarrow bush tomato beetroot taro water chestnut komatsuna azuki bean. Parsnip artichoke water chestnut caulie carrot grape summer purslane brussels sprout fava bean tomatillo pea groundnut nori earthnut pea tigernut. Tigernut brussels sprout wakame tomatillo radicchio carrot maize swiss chard seakale melon grape broccoli pea sprouts kakadu plum plantain cauliflower. Gram salsify radicchio daikon courgette rock melon bunya nuts turnip greens. Cabbage black-eyed pea spinach asparagus plantain cress soybean spring onion salad artichoke pea garlic silver beet grape water spinach zucchini wakame summer purslane.</p>
+							<div class="panel" title="Panel 5">
+								<div class="wrapper">
+									<img src="images/5.jpg" alt="temp" />
+									<div class="photo-meta-data">
+										New Video on CSS-Tricks<br />
+										<span>Using Wufoo for Web Forms</span>
+									</div>
 								</div>
 							</div>
-						</li>
-						<li id="slide5">
-							<h3 class="icon-platypus">Platypus</h3>
-							<div>
-								<div class="cbp-content">
-									<p>Potato watercress burdock spinach quandong jícama chard pea sprouts garlic celery turnip daikon kale lotus root sorrel coriander rock melon cabbage. Epazote salsify lentil rock melon eggplant cauliflower zucchini caulie catsear broccoli rabe pumpkin lettuce okra green bean squash seakale onion water chestnut. Sweet pepper peanut corn soko celery winter purslane.</p>
-									<p>Daikon artichoke gumbo azuki bean bok choy avocado winter purslane gram earthnut pea broccoli salsify squash plantain wattle seed wakame broccoli rabe bamboo shoot. Zucchini lotus root azuki bean epazote dulse pumpkin rutabaga spinach. Endive mung bean gumbo maize plantain rock melon.</p>
+							<div class="panel" title="Panel 6">
+								<div class="wrapper">
+									<img src="images/6.jpg" alt="temp" />
+									<h1>A Tale of Two Cities</h1>
+									<p><em>Charles Dickins</em></p>
+									<blockquote>It was the best of times, it was the worst of times, it was the age of wisdom, it was the age of foolishness, it was the epoch of belief, it was the epoch of incredulity, it was the season of Light, it was the season of Darkness, it was the spring of hope, it was the winter of despair, we had everything before us, we had nothing before us, we were all going direct to heaven, we were all going direct the other way - in short, the period was so far like the present period, that some of its noisiest authorities insisted on its being received, for good or for evil, in the superlative degree of comparison only.</blockquote>
 								</div>
 							</div>
-						</li>
-					</ul>
-					<nav>
-						<a href="#slide1" class="icon-wolf"><span>Wolf</span></a>
-						<a href="#slide2" class="icon-rabbit"><span>Rabbit</span></a>
-						<a href="#slide3" class="icon-aligator"><span>Aligator</span></a>
-						<a href="#slide4" class="icon-turtle"><span>Turtle</span></a>
-						<a href="#slide5" class="icon-platypus"><span>Platypus</span></a>
-					</nav>
+
+						</div>
+					</div>
+
+					<a href="#1" class="cross-link active-thumb"><img src="images/tempphoto-1thumb.jpg" class="nav-thumb" alt="temp-thumb" /></a>
+					<div id="movers-row">
+						<div><a href="#2" class="cross-link"><img src="images/tempphoto-2thumb.jpg" class="nav-thumb" alt="temp-thumb" /></a></div>
+						<div><a href="#3" class="cross-link"><img src="images/tempphoto-3thumb.jpg" class="nav-thumb" alt="temp-thumb" /></a></div>
+						<div><a href="#4" class="cross-link"><img src="images/tempphoto-4thumb.jpg" class="nav-thumb" alt="temp-thumb" /></a></div>
+						<div><a href="#5" class="cross-link"><img src="images/tempphoto-5thumb.jpg" class="nav-thumb" alt="temp-thumb" /></a></div>
+						<div><a href="#6" class="cross-link"><img src="images/tempphoto-6thumb.jpg" class="nav-thumb" alt="temp-thumb" /></a></div>
+					</div>
 				</div>
 			</div>
 		</div>
-		<script>
+		<script> // MENU
 			//  The function to change the class
 			var changeClass = function (r,className1,className2) {
 				var regex = new RegExp("(?:^|\\s+)" + className1 + "(?:\\s+|$)");
