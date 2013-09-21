@@ -8,12 +8,32 @@
 		<meta name="description" content="Rutgers iGEM 2013 team" />
 		<link rel="shortcut icon" href="../favicon.ico">
 		<link rel="stylesheet" type="text/css" href="css/default.css" />
-		<link rel="stylesheet" type="text/css" href="modern-slide-in/css/sequencejs-theme.modern-slide-in.css" />
 		<link rel="stylesheet" type="text/css" href="css/component.menu.css" />
 		<script src="js/modernizr.custom.js"></script>
 		<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-		<script src="modern-slide-in/scripts/jquery.sequence-min.js"></script>
-		<script src="modern-slide-in/sequencejs-options.modern-slide-in.js"></script>
+		<!-- Required CSS -->
+		<link href="css/movingboxes.css" media="screen" charset="utf-8" rel="stylesheet">
+		<!--[if lt IE 9]>
+		<link type="text/css" href="css/movingboxes-ie.css" rel="stylesheet" media="screen" />
+		<![endif]-->
+		<style>
+		/* MovingBoxes dimensions set using css in v2.2.2+ */
+		#slider { width: 500px; }
+		#slider li { width: 250px; }
+		</style>
+
+		<!-- Required script -->
+		<script src="js/jquery.movingboxes.js" charset="utf-8"></script>
+
+		<!-- Optional plugins -->
+		<script src="js/jquery.easing.1.2.js"></script>
+
+		<!-- Required script -->
+		<script>
+		$(function(){
+		 $('#boxes').movingBoxes(); // add any non-default options inside here
+		});
+		</script>
 	</head>
 	<body>
 		<div class="container">
@@ -73,71 +93,31 @@
 				</nav>
 			</header>	
 			<div class="main">
-				<a href="http://css-tricks.com/examples/AnythingSlider/#&panel1-4"><h1>1</h1></a>
+				<!--a href="http://css-tricks.com/examples/AnythingSlider/#&panel1-4"><h1>1</h1></a>
 				<a href="http://css-tricks.com/moving-boxes/"><h1>2</h1></a>
-				<a href="http://css-tricks.com/examples/SlideInImageBoxes/">3</a>
-				<a href="http://css-tricks.com/slider-with-sliding-backgrounds/">4</a>
-				<a href="http://www.sequencejs.com/themes/modern-slide-in/">(current)</a>
+				<a href="http://css-tricks.com/examples/SlideInImageBoxes/"><h1>3</h1></a>
+				<a href="http://css-tricks.com/slider-with-sliding-backgrounds/"><h1>4</h1></a>
+				<a href="http://www.sequencejs.com/themes/modern-slide-in/"><h1>(current)</h1></a>
 				<p>todo: all caps names looks good</p>
-				<div id="sequence">
+				<br><br><br-->
 
-					<img class="sequence-prev" src="modern-slide-in/images/bt-prev.png" alt="Previous Frame" />
-					<img class="sequence-next" src="modern-slide-in/images/bt-next.png" alt="Next Frame" />
-
-					<ul class="sequence-canvas">
-						<li class="animate-in">
-							<h2 class="title">Patrick Jejenum</h2>
-							<h3 class="subtitle">The Responsive Slider with Advanced CSS3 Transitions</h3>
-							<img class="model" src="modern-slide-in/images/model1.jpeg" alt="Model 1" />
-						</li>
-						<li>
-							<h2 class="title">Ronny Cupola</h2>
-							<h3 class="subtitle">Create unique sliders using CSS3 transitions</h3>
-							<img class="model" src="modern-slide-in/images/model2.jpeg" alt="Model 2" />
-						</li>
-						<li>
-							<h2 class="title">James Peltier</h2>
-							<h3 class="subtitle">Supports modern browsers, old browsers (IE7+), touch devices and responsive designs</h3>
-							<img class="model" src="modern-slide-in/images/model3.jpeg" alt="Model 3" />
-						</li>
-						<li>
-							<h2 class="title">Kelly Smithers</h2>
-							<h3 class="subtitle">Supports modern browsers, old browsers (IE7+), touch devices and responsive designs</h3>
-							<img class="model" src="modern-slide-in/images/model4.jpeg" alt="Model 4" />
-						</li>
-						<li>
-							<h2 class="title">Justin Folleuse</h2>
-							<h3 class="subtitle">Supports modern browsers, old browsers (IE7+), touch devices and responsive designs</h3>
-							<img class="model" src="modern-slide-in/images/model5.jpeg" alt="Model 5" />
-						</li>
-						<li>
-							<h2 class="title">Gerald Thompson</h2>
-							<h3 class="subtitle">Supports modern browsers, old browsers (IE7+), touch devices and responsive designs</h3>
-							<img class="model" src="modern-slide-in/images/model6.jpeg" alt="Model 6" />
-						</li>
-						<li>
-							<h2 class="title">Melonie Carter</h2>
-							<h3 class="subtitle">Supports modern browsers, old browsers (IE7+), touch devices and responsive designs</h3>
-							<img class="model" src="modern-slide-in/images/model7.jpeg" alt="Model 7" />
-						</li>
-						<li>
-							<h2 class="title">Foster Ferrel</h2>
-							<h3 class="subtitle">Supports modern browsers, old browsers (IE7+), touch devices and responsive designs</h3>
-							<img class="model" src="modern-slide-in/images/model8.jpeg" alt="Model 8" />
-						</li>
-					</ul>
-
-					<ul class="sequence-pagination">
-						<li><img src="modern-slide-in/images/tn-model1.jpeg" alt="Model 1" /></li>
-						<li><img src="modern-slide-in/images/tn-model2.jpeg" alt="Model 2" /></li>
-						<li><img src="modern-slide-in/images/tn-model3.jpeg" alt="Model 3" /></li>
-						<li><img src="modern-slide-in/images/tn-model4.jpeg" alt="Model 4" /></li>
-						<li><img src="modern-slide-in/images/tn-model5.jpeg" alt="Model 5" /></li>
-						<li><img src="modern-slide-in/images/tn-model6.jpeg" alt="Model 6" /></li>
-						<li><img src="modern-slide-in/images/tn-model7.jpeg" alt="Model 7" /></li>
-						<li><img src="modern-slide-in/images/tn-model8.jpeg" alt="Model 8" /></li>
-					</ul>
-
+				<ul id="boxes" style="color:white">
+					<li>
+						<img src="images/Ethel_Roosevelt_1895.jpg" alt="picture" />
+						<h2>Ethel Roosevelt</h2>
+						<p>Ethel Carow Roosevelt Derby (August 13, 1891 – December 10, 1977) was the youngest daughter and fourth child of the President of the United States Theodore Roosevelt. Known as The Queen of Oyster Bay and The First Lady of Oyster Bay by its Long Island residents, Ethel was instrumental in preserving both the legacy of her father as well as the family home, "Sagamore Hill" for future generations, especially after the death of her mother Edith in 1948.</p>
+					</li>
+					<li>
+						<img src="images/Ethel_Roosevelt_1895.jpg" alt="picture" />
+						<h2>Ethel Roosevelt</h2>
+						<p>Ethel Carow Roosevelt Derby (August 13, 1891 – December 10, 1977) was the youngest daughter and fourth child of the President of the United States Theodore Roosevelt. Known as The Queen of Oyster Bay and The First Lady of Oyster Bay by its Long Island residents, Ethel was instrumental in preserving both the legacy of her father as well as the family home, "Sagamore Hill" for future generations, especially after the death of her mother Edith in 1948.</p>
+					</li>
+					<li>
+						<img src="images/Ethel_Roosevelt_1895.jpg" alt="picture" />
+						<h2>Ethel Roosevelt</h2>
+						<p>Ethel Carow Roosevelt Derby (August 13, 1891 – December 10, 1977) was the youngest daughter and fourth child of the President of the United States Theodore Roosevelt. Known as The Queen of Oyster Bay and The First Lady of Oyster Bay by its Long Island residents, Ethel was instrumental in preserving both the legacy of her father as well as the family home, "Sagamore Hill" for future generations, especially after the death of her mother Edith in 1948.</p>
+					</li>
+				</ul>
 			</div>
 			</div>
 		</div>
