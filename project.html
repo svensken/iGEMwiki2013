@@ -15,6 +15,7 @@
 	<body>
 		<div class="container">
 			<header class="clearfix">
+
 				<a href="index.html"><img src="knight.png"></a>
 				<nav id="menu" class="nav">					
 					<ul>
@@ -27,11 +28,11 @@
 							</a>
 						</li>
 						<li>
-							<a href="team.html">
+							<a href="people.html">
 								<span class="icon"> 
 									<i aria-hidden="true" class="icon-team"></i>
 								</span>
-								<span>team</span>
+								<span>people</span>
 							</a>
 						</li>
 						<li>
@@ -59,11 +60,11 @@
 							</a>
 						</li>
 						<li>
-							<a href="outreach.html">
+							<a href="practices.html">
 								<span class="icon">
 									<i aria-hidden="true" class="icon-outreach"></i>
 								</span>
-								<span>outreach</span>
+								<span>practices</span>
 							</a>
 						</li>
 					</ul>
@@ -112,7 +113,9 @@
 							<p>[1] Taga, Michiko E., and Bonnie L. Bassler. "Chemical Communication among Bacteria."(Sackler NAS Colloquium) Chemical Communication in a Post-Genomic World. The National Academies, 25 Nov. 203. Web. 30 July 2013.</p>
 							<p>[2] Bluth, Brian J., Sarah E. Frew, and Brian McNally. "Cell-Cell Communication and the Lux Operon in Vibrio Fischeri." Bioluminescence and the Lux Operon in Vibrio Fischeri. Carnegie Mellon University, 31 July 2013. Web. 31 July 2013. <a href="https://www.bio.cmu.edu/courses/03441/TermPapers/97TermPapers/lux/default.html">https://www.bio.cmu.edu/courses/03441/TermPapers/97TermPapers/lux/default.html</a>.</p>
 						<h2 id="qsda">qsdA</h2>
-							<p>fill me in and stuff</p>
+							<p><strong>HSL Degradation Protein</strong> - Quorum quenching has remarkable properties that give it a pathway to become a major therapeutically relevant process. Quorum quenching primary focus is to turn off virulence expression in pathogenic bacteria when certain requirements are met.  The main requirement is that cell density of the bacteria needs to high enough that enough N-acyl-homoserine lactone (AHL) is present to activate quorum sensing. This would mean that quorum quenching can stop the expression of virulent factors at a critical point as well as allow the immune system to deal with the problem by itself before interfering. This method of treatment is different from conventional methods of treatment in that it does not interfere with DNA, RNA or protein synthesis.</p>
+							<p>Quorum quenching can be achieved through the use of qsdA, a protein found in Rhodococcus erythropolis W2. qsdA belongs to phosphotriesterase family that harbors phosphotriesterase, lactonase or amidohydrolase activities. qsdA has the ability to inactivate AHLs with a carbon chain ranging from six carbons to fourteen. It has also been shown that bacteria that have the qsdA gene interfere efficiently with quorum sensing functions. It should be noted that qsdA has a low sequence similarity with that of other lactonases; for example, AiiA is a well-studied lactonase that shows significant similarities with other lactonases, except for qsdA. This prompted us to examine qsdA in detail and try to find and add to the known array of information about qsdA and its functions in quorum quenching.</p>
+							<p>Chen, Fang, Yuxin Gao, Xiaoyi Chen, Zhimin Yu, and Zianzhen Li. "Quorum Quenching Enzymes and Their Application in Degrading Signal Molecules to Block Quorum Sensing-Dependent Infection." International Journal of Molecular Sciences12.1422-0067 (2013): 17477-7500</p>
 						<h2 id="linker">GS LINKER</h2>
 							<p> </p>
 							<img src="images/linker1.png" />
@@ -120,7 +123,23 @@
 							<p>The fusion of two proteins and its ability to still function correctly is facilitated by the glycine serine linker. The fusion of two proteins, and therefore the expression, requires that the folding and attributes of one protein not affected by the other. This is usually not the case, an extreme example being when the last amino acid of a particular protein is near some sort of active site. If the other protein was to begin its formation from this point then the active site and the functionality of the first protein would be at risk. In order to eliminate such risk there are linkers used. Linkers usually contain amino acids that are not very active and would not harm the functionality of the protein, glycine and serine are two very common amino acids used for linkers. The linker would be composed so that there would be an alternating trend of glycine then serene. The amount of reiterations is variable and depends on the location on the protein where the last amino acid is located. Normally, there is one or two reiterations of the glycine and serine. Upon the proper insertion of a linker, the expression of two proteins will be joined with no decrease in activity or functionality.</p>
 							<p>We are using a glycine serine linker in our project to join the expression of Pon1 and GFP. The last amino acid of the Pon1 protein lies on the surface of the protein and is far away from any important locations. Therefore, we are implementing a 2 repeats of glycine serine to make sure no factors harm either protein’s function. The reason we are implementing this fusion is to have a clear indication when Pon1 in the cell has become active, GFP will become active and create green pigmentation, and to visually see the self-regulation that the lux operon and pon1 create.  This, amongst other things, will allow us to do multiple assays about pon1 and its function.</p>
 						<h2 id="assayI">ASSAY</h2>
-							<p>results!</p>
+							<p><strong>Flourescence Assay</strong> - Our project submission BBa_6120600, is designed with a glycine serine amino acid link between the degradation enzyme qsda-1 and GFP reporter.  Because of this, when the enzyme begins degrading the autoinducer AHL in the surrounding environment, our plasmid will fluoresce green.  For this assay, we used a Tecan plate reader to measure relative fluorescence given off by our modified E. Coli cell when AHL is prominent in the cell’s environment.</p>
+							<p>To be sure we are getting correct results, we decided to measure the relative fluorescence given off by our project cell when it is uninduced, our project cell when it is induced by the autoinducer AHL, and cells of the green fluorescence protein that will be constitutively be expressing fluorescence.  The hypothesized results before the assay was preformed were that the GFP would show the most relative fluorescence.  That the uninduced project cells will show little to no fluorescence, and the induced project cells will have a relative fluorescence in between the two.</p>
+							<p>Before we could run the assay, we had to look up the emission wavelength and the excitation wavelength from the iGEM parts registry data base for the specific green fluorescence protein we chose from the iGEM biobrick.  These values were 395 nm for emission and 515 nm for excitation wavelength.  These values were submitted into the Tecan plate reader computer program for accurate readings.  When we ran our plate reader, the average fluorescence for each were determined, and the results fit in with our hypothesis.  The GFP cells fluoresced the most, the uniduced cells fluoresced the least, and the induced project cells relative fluorescence was in the midde.  The average relative fluorescence of the three are as follows and are measured as a numerical value of relative fluorescence given off.</p>
+							<table style="margin-bottom:30px">
+								<tr>
+									<td>Green Flourescence proteins</td>
+									<td>42,205</td>
+								</tr>
+								<tr>
+									<td>Induced E. Coli cell</td>
+									<td>31,248</td>
+								</tr>
+								<tr>
+									<td>Uninduced E. Coli cell</td>
+									<td>24,025</td>
+								</tr>
+							</table>
 					<h1 id="PhaseII">PHASE II</h1>
 						<p>One of the developing problems in healthcare is how to treat bacterial infections. Since the discovery of penicillin, antibiotics have been the answer. Antibiotics work by selectively targeting bacteria and killing them before they are able to reproduce. Unfortunately, when bacteria are treated with antibiotics, some will develop a resistance to particular strains of antibiotics due to random mutations. Antibiotic pressure is the term used to describe antibiotic promotion of resistance development by pathogens1. The evolution of bacteria, stimulated by antibiotics, is easily observed because of how quickly new bacterial generations are produced. If bacteria become resistant to multiple antibiotics, they can be termed “superbugs”.</p>
 						<p>As one could imagine, this problem is magnified in hospital settings. Hospitals have a high usage of antibiotics and therefore are exposing strains of bacteria to many antibiotics2. Some examples of resistant bacteria pathogens are methicillin resistant Staphylococcus aureus, Enterococci, Pseudomonas, and Acinetobacter1.</p>
@@ -247,9 +266,6 @@
 									<td> <code>233</code> </td>
 								</tr>
 							</table>
-					<h1 id="acknowledgments">Acknowledgments</h1>
-						<p>We would like to acknowledge Dr. Sagar Khare and Andrew Laudisi for their guidance and input throughout the process. We would also like to acknowledge Dr. Tom Muir for providing the AIP used to test the functionality of the protein.</p>
-						<p>For the design of the website, we got many ideas from <a href="http://tympanus.net/codrops/author/crnacura/">Mary Lou</a> and </p>
 				</div>
 			</div>
 		</div>
