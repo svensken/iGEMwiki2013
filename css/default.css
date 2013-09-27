@@ -33,6 +33,15 @@ a:hover {
 	color: #000;
 }
 
+.container table {
+	border: 1px solid white;
+}
+.container table td,
+.container table th {
+    border: 1px solid white;
+    padding: 10px 20px;
+  }
+
 .container > header {
 	margin: 0 auto;
 	position: relative;

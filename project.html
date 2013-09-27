@@ -94,6 +94,7 @@
 				    </code>
 				</ul>	
 			</div>
+			<h4> remember to (A) add image captions (B) convert citation numbers to superscripts (C) finish attributions...</h4>
 			<div class="main" style="color:black">
 				<div class="subjects">
 					<h1 id="Abstract">ABSTRACT</h1>
@@ -121,15 +122,134 @@
 						<h2 id="assayI">ASSAY</h2>
 							<p>results!</p>
 					<h1 id="PhaseII">PHASE II</h1>
-						<p>look at me, i'm phase II</p>
-						<h2 id="Rosetta">ROSETTA</h2>
-							<p>lovely software indeed</p>
-						<h2 id="Foldit">FOLDIT</h2>
-							<p>kinda like magic</p>
-						<h2 id="protein">MR DG427</h2>
-							<p>mr deepak, mr deepak, we'd like for you to continue mutating residues</p>
+						<p>One of the developing problems in healthcare is how to treat bacterial infections. Since the discovery of penicillin, antibiotics have been the answer. Antibiotics work by selectively targeting bacteria and killing them before they are able to reproduce. Unfortunately, when bacteria are treated with antibiotics, some will develop a resistance to particular strains of antibiotics due to random mutations. Antibiotic pressure is the term used to describe antibiotic promotion of resistance development by pathogens1. The evolution of bacteria, stimulated by antibiotics, is easily observed because of how quickly new bacterial generations are produced. If bacteria become resistant to multiple antibiotics, they can be termed “superbugs”.</p>
+						<p>As one could imagine, this problem is magnified in hospital settings. Hospitals have a high usage of antibiotics and therefore are exposing strains of bacteria to many antibiotics2. Some examples of resistant bacteria pathogens are methicillin resistant Staphylococcus aureus, Enterococci, Pseudomonas, and Acinetobacter1.</p>
+						<p>New methods to eliminate bacteria to circumvent traditional antibiotics are being investigated. One of these methods is quenching autoinducing peptides of quorum sensing bacteria. Quorum sensing is the ability of microorganisms to coordinate gene expression in relation to their population density3. When certain bacteria are in high- density situations, small autoinducers or peptides are released to neighboring bacteria.</p>
+						<p>After binding to other bacteria, the peptide initiates a change in the expression of certain genes. This could result in bioluminescence in some strains of bacteria such as Vibrio fischeri, or the release of virulent factors in other strains such as Staphylococcus aureus5. S. aureus infections can be devastating or relatively minor. It can result in lesions, blood poisoning, and septic arthritis amongst other conditions.</p>
+						<p>The peptides are only effective when numerous bacterial organisms are present. If only a few are present, the effect will not be large enough to succeed. In principle, it should be possible to eliminate bacterial infections by intercepting this communication system. In fact, Park et al. demonstrated this potential. But, first, a little more information regarding S. aureus is necessary. The two main virulent factors in the organism are protein A and alpha-Hemolysin with both proteins being regulated by quorum sensing3. They showed that interrupting the signaling communication on blood agar plates diminished expression of alpha-Hemolysin. Additionally, it was shown that staphylococci infection in mice was reduced with the administration of an antibody to bind the autoinducing peptide3. This research offers promise that quenching of autoinducing peptides can be a viable treatment. Utilizing quorum quenching treatments over traditional antibiotics is advantageous because it does not provide selective pressure against the bacteria3. The expression of virulent factors is suppressed, but the essential metabolic activities of the individual bacteria are not disrupted and bacterial resistance developed as easily.</p>
+						<h2 id="goal">GOAL</h2>
+							<p>We hope to take the research described above a step further by designing an enzyme to disrupt the quorum sensing system by degrading the autoinducers. While antibodies can bind to autoinducers, they cannot hydrolyze them. Additionally, antibodies are bulky structures, which can pose problems for drug delivery applications. The particular peptide precursor for MRSA has a thioester linkage created from a bond between a cysteine residue and the terminal carboxyl group. The thioester linkage will be the target for the enzyme to hydrolyze the peptide precursor and disrupt the quorum sensing system of the bacteria.</p>
+							<figure>
+								<img src="images/AIP_structs.png" alt="[image:AIP]" width="400">
+								<figcaption>Different Structures of AIP<sup>3</sup></figcaption>
+							</figure>
+							<figure>
+								<img src="images/AIP_model.png" alt="[image:AIP]">
+								<figcaption>Computational Model of AIP-4</figcaption>
+							</figure>
+						<h2 id="design">DESIGN</h2>
+							<p>Rosetta is an essential software tool for protein redesign. The software optimizes the residues around the transition state to maximize the catalytic efficiency. This is achieved by first providing the software with a model of the transition state surrounded by the side chain and backbone of a protein in the best theoretical positions. The enzyme model can then be called a theozyme. Rosetta then Score. Rosetta Scores correlate with Gibbs Free Energy, but do not measure entropy directly, only indirectly. The design process utilizing Rosetta3 can be broken down into four parts: choice of catalytic mechanism and corresponding theozyme, matching identifying sites in the scaffold library where the theozyme can be placed, designing the found sites, and evaluating and ranking the resulting designed sequences. This process allows one to alter the substrate specificity of an enzyme<sup>4</sup>.</p>
+							<p>Foldit is a program that provides a visualization of all of the interactions a protein makes. It is particularly helpful in viewing hydrophobic, aromatic stacking, and hydrogen bonding interactions. Foldit also contains a scoring function that useful for understanding the effects the potential side chain mutations can make. We made the following mutations, listed below, to enhance binding.</p>
+							<table><tr><td>
+								<p>Original Score: <code>-983.35</code></p>
+							</td></tr></table>
+							<br>
+							<table border="1">
+								<tr>
+									<th>  <i>Mutation</i>  </th>
+									<th>  <i>Original</i>  </th>
+									<th>  <i>New Score</i> </th>
+								</tr>
+								<tr>
+									<td>Aspartate-54</td>
+									<td>Alanine</td>
+									<td> <code>-990.54</code> </td>
+								</tr>
+								<tr>
+									<td>Asparagine-103</td>
+									<td>Threonine</td>
+									<td> <code>-988.43</code> </td>
+								</tr>
+								<tr>
+									<td>Methionine-105</td>
+									<td>Asparagine</td>
+									<td> <code>-991.94</code> </td>
+								</tr>
+								<tr>
+									<td>Asparagine-101</td>
+									<td>Threonine</td>
+									<td> <code>-988.35</code> </td>
+								</tr>
+							</table>
+							<figure>
+								<img src="images/foldit.png">
+								<figcaption>Foldit representation of designed protein bound to AIP-4 showing the numerous intramolecular forces</figcaption>
+							</figure>
+							<figure>
+								<img src="images/active_site.png">
+								<figcaption>Designed protein active site with AIP-4 and mutations colored</figcaption>
+							</figure>
 						<h2 id="assayII">ASSAY</h2>
-							<p>more results!</p>
+							<p>If the designed protein is successful, it will hydrolyze the autoinducer at the thioester linkage and produce free cysteine with exposed thiol groups. To determine the protein’s activity, we utilized Ellman’s Reagent. This reagent enables us to measure the concentration of sulfur in solution with UV absorbance. The reaction that Ellman’s Reagent undergoes in the presence of sulfur can be seen below.</p>
+							<figure>
+								<img src="images/ellmans.png">
+							</figure>
+							<p>Initial results are promising. As the figure shows, when the thiol absorbance of AIP and the protein are measured individually, the combined absorbance is 0.326. However when the two are measured simultaneously (interacting with each other), the absorbance rises to 0.367. This appears to indicate that the protein hydrolyzed the peptide and increased the sulfur concentration.</p>
+							<figure>
+								<img src="images/absorbance.png">
+							</figure>
+						<h2 id="future">FUTURE</h2>
+							<p>The designed protein contains a total of seven cysteine residues. While these should be accounted for with the background absorbance measurements, it would be ideal to remove this absorbance by mutating the residues to another amino acid with similar properties, such as serine. Additionally, further mutations to residues can be used to enhance the binding of the protein with the various types of autoinducers to generate specificity for different strains of bacteria.</p>
+							<table style="margin-bottom:40px">
+								<tr>
+									<th>  <i>Original</i>           </th>
+									<th>  <i>Potential Mutation</i> </th>
+									<th>  <i>Amino Acid number</i>  </th>
+								</tr>
+								<tr>
+									<td>Threonine</td>
+									<td>Glutamine</td>
+									<td> <code>101</code> </td>
+								</tr>
+								<tr>
+									<td>Threonine</td>
+									<td>Serine</td>
+									<td> <code>101</code> </td>
+								</tr>
+								<tr>
+									<td>Alanine</td>
+									<td>Serine</td>
+									<td> <code>54</code> </td>
+								</tr>
+								<tr>
+									<td>Alanine</td>
+									<td>Glutamate</td>
+									<td> <code>54</code> </td>
+								</tr>
+								<tr>
+									<td>Alanine</td>
+									<td>Serine</td>
+									<td> <code>56</code> </td>
+								</tr>
+								<tr>
+									<td>Aspartate</td>
+									<td>Methionine</td>
+									<td> <code>175</code> </td>
+								</tr>
+								<tr>
+									<td>Glutamate</td>
+									<td>Glutamine</td>
+									<td> <code>60</code> </td>
+								</tr>
+								<tr>
+									<td>Glutamate</td>
+									<td>Aspartate</td>
+									<td> <code>60</code> </td>
+								</tr>
+								<tr>
+									<td>Glutamine</td>
+									<td>Alanine</td>
+									<td> <code>233</code> </td>
+								</tr>
+								<tr>
+									<td>Glutamine</td>
+									<td>Methionine</td>
+									<td> <code>233</code> </td>
+								</tr>
+							</table>
+					<h1 id="acknowledgments">Acknowledgments</h1>
+						<p>We would like to acknowledge Dr. Sagar Khare and Andrew Laudisi for their guidance and input throughout the process. We would also like to acknowledge Dr. Tom Muir for providing the AIP used to test the functionality of the protein.</p>
+						<p>For the design of the website, we got many ideas from <a href="http://tympanus.net/codrops/author/crnacura/">Mary Lou</a> and </p>
 				</div>
 			</div>
 		</div>
