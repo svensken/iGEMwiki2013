@@ -44,11 +44,11 @@
 							</a>
 						</li>
 						<li>
-							<a href="sponsors.html">
+							<a href="safety.html">
 								<span class="icon">
 									<i aria-hidden="true" class="icon-sponsors"></i>
 								</span>
-								<span>sponsors</span>
+								<span>safety</span>
 							</a>
 						</li>
 						<li>
@@ -88,25 +88,24 @@
 					    <li><a href="#PhaseII">Phase II</a></li>
 					</strong>
 				    <code>
-					    <li><a href="#Rosetta"> -Rosetta</a></li>
-					    <li><a href="#Foldit"> -Foldit</a></li>
-					    <li><a href="#protein"> -protein</a></li>
+					    <li><a href="#goal"> -goal</a></li>
+					    <li><a href="#design"> -design</a></li>
 					    <li><a href="#assayII"> -assay</a></li>
+					    <li><a href="#future"> -future</a></li>
 				    </code>
 				</ul>	
 			</div>
-			<h4> remember to (A) add image captions (B) convert citation numbers to superscripts (C) finish attributions...</h4>
 			<div class="main" style="color:black">
 				<div class="subjects">
 					<h1 id="Abstract">ABSTRACT</h1>
-						<p>Our project aims at developing a self-regulatory system for the degradation of virulent factors. We plan to integrate quorum sensing and pon1 to create this system of self-regulation. Quorum sensing will be used to detect the presence of high cell densities and to activate pon1 upon detecting high cell density. Pon1, acting as a repressor, will degrade the signal molecules needed for quorum sensing and thus turn off quorum sensing as well as itself. It will reactivate upon the reactivation of quorum sensing and this cycle of self-regulation will persist. This prototype system is meant to test the application of this system but the main goal is to introduce this system to pseudomonas aeruginosa as a means to prevent the harm that it causes.</p>
+						<p>Our project aims at developing a self-regulatory system for the degradation of virulent factors. We plan to integrate quorum sensing and qsdA to create this system of self-regulation. Quorum sensing will be used to detect the presence of high cell densities and to activate qsdA upon detecting high cell density. qsdA, acting as a repressor, will degrade the signal molecules needed for quorum sensing and thus turn off quorum sensing as well as itself. It will reactivate upon the reactivation of quorum sensing and this cycle of self-regulation will persist. This prototype system is meant to test the application of this system but the main goal is to introduce this system to pseudomonas aeruginosa as a means to prevent the harm that it causes.</p>
 						<p>The quorum sensing regulatory gene circuit is meant to target pathogens such as pseudomonas aeruginosa that use quorum sensing as a means for regulation of virulent factors. However, our hope is that by creating a new paradigm for fighting virulence in pathogenic cells will provide insight for future works and endeavors.  This system is meant to not be only restricted to pseudomonas aeruginosa but to be altered to fight virulence in other pathogens.</p>
 					<h1 id="PhaseI">PHASE I</h1>
 						<h2 id="lux">LUX OPERON</h2>
 							<p>AHL or Acylated Homoserine Lactones belong to a class of autoinducers. These autoinducers act as chemical signaling molecules that gram-negative and gram-positive bacteria use as a way of communicating with one another. Additionally, this form of communication is used to regulate various physiological activities and more specifically virulence.</p> 
 							<p>The detection of these autoinducers involves diffusion into the cells and binding to receptors. However, the binding autoinducers and receptors does not usually occur until a threshold concentration of autoinducers is reached. High concentrations of gram-negative and grampositive bacteria is often accompanied by a high concentration of autoinducers and so detection of these autoinducers is achieved in the presence of a high concentration of autoinducer producing bacteria [1]. This cell-cell communication in bacteria is a process called quorum sensing, which allows for bacteria to respond to fluctuations in the number of species present by altering physiological activities [1].</p>
 							<p>Acylated Homoserine Lactones are neutral lipid molecules composed of a homoserine lactone ring with an acyl chain. AHLs produced by different species of Gram-negative bacteria vary in length and composition of the acyl chain which contain 4 to 18 carbon atoms, making most quorum-sensing systems within bacterium species or group specific. AHLs are synthesized by AHL synthases and diffuse in and out of the cell by active or passive transport [1].</p>
-							<img src="images/luxBoxGif.gif" />
+							<img src="images/IGEM_GIF_2013.gif" width="700" />
 							<p><strong>LuxR:</strong> LuxR is a gene that codes for the receptor protein that binds to the autoinducer. As the receptor binds to the autoinducer, the complex binds a specific sequence of DNA in front of the right operon and activates the expression of lux structural genes. The LuxR protein is at first inactive but when the autoinducer binds the receptor protein becomes activated. The LuxR-autoinducer complex binds to a 20 bp palindromic sequence, called the LuxBox [2]. </p>
 							<p><strong>LuxI:</strong> LuxI is a gene that synthesizes the autoinducer.</p>
 							<p><strong>LuxBox:</strong> The LuxBox is a 20 bp palindromic promoter sequence. The binding of the luxR-autoinducer complex to this sequence increases RNA polymerase's affinity towards the promoter region of the LuxI and structural genes downstream of LuxI region [2]. </p>
@@ -118,10 +117,10 @@
 							<p>Chen, Fang, Yuxin Gao, Xiaoyi Chen, Zhimin Yu, and Zianzhen Li. "Quorum Quenching Enzymes and Their Application in Degrading Signal Molecules to Block Quorum Sensing-Dependent Infection." International Journal of Molecular Sciences12.1422-0067 (2013): 17477-7500</p>
 						<h2 id="linker">GS LINKER</h2>
 							<p> </p>
-							<img src="images/linker1.png" />
-							<img src="images/linker2.png" />
+							<img src="images/Linker1.png" />
+							<img src="images/Linker2.png" />
 							<p>The fusion of two proteins and its ability to still function correctly is facilitated by the glycine serine linker. The fusion of two proteins, and therefore the expression, requires that the folding and attributes of one protein not affected by the other. This is usually not the case, an extreme example being when the last amino acid of a particular protein is near some sort of active site. If the other protein was to begin its formation from this point then the active site and the functionality of the first protein would be at risk. In order to eliminate such risk there are linkers used. Linkers usually contain amino acids that are not very active and would not harm the functionality of the protein, glycine and serine are two very common amino acids used for linkers. The linker would be composed so that there would be an alternating trend of glycine then serene. The amount of reiterations is variable and depends on the location on the protein where the last amino acid is located. Normally, there is one or two reiterations of the glycine and serine. Upon the proper insertion of a linker, the expression of two proteins will be joined with no decrease in activity or functionality.</p>
-							<p>We are using a glycine serine linker in our project to join the expression of Pon1 and GFP. The last amino acid of the Pon1 protein lies on the surface of the protein and is far away from any important locations. Therefore, we are implementing a 2 repeats of glycine serine to make sure no factors harm either protein’s function. The reason we are implementing this fusion is to have a clear indication when Pon1 in the cell has become active, GFP will become active and create green pigmentation, and to visually see the self-regulation that the lux operon and pon1 create.  This, amongst other things, will allow us to do multiple assays about pon1 and its function.</p>
+							<p>We are using a glycine serine linker in our project to join the expression of qsdA and GFP. The last amino acid of the qsdA protein lies on the surface of the protein and is far away from any important locations. Therefore, we are implementing a 2 repeats of glycine serine to make sure no factors harm either protein’s function. The reason we are implementing this fusion is to have a clear indication when qsdA in the cell has become active, GFP will become active and create green pigmentation, and to visually see the self-regulation that the lux operon and qsdA create.  This, amongst other things, will allow us to do multiple assays about qsdA and its function.</p>
 						<h2 id="assayI">ASSAY</h2>
 							<p><strong>Flourescence Assay</strong> - Our project submission BBa_6120600, is designed with a glycine serine amino acid link between the degradation enzyme qsda-1 and GFP reporter.  Because of this, when the enzyme begins degrading the autoinducer AHL in the surrounding environment, our plasmid will fluoresce green.  For this assay, we used a Tecan plate reader to measure relative fluorescence given off by our modified E. Coli cell when AHL is prominent in the cell’s environment.</p>
 							<p>To be sure we are getting correct results, we decided to measure the relative fluorescence given off by our project cell when it is uninduced, our project cell when it is induced by the autoinducer AHL, and cells of the green fluorescence protein that will be constitutively be expressing fluorescence.  The hypothesized results before the assay was preformed were that the GFP would show the most relative fluorescence.  That the uninduced project cells will show little to no fluorescence, and the induced project cells will have a relative fluorescence in between the two.</p>
@@ -191,21 +190,21 @@
 								</tr>
 							</table>
 							<figure>
-								<img src="images/foldit.png">
+								<img src="images/Foldit.png" width="500">
 								<figcaption>Foldit representation of designed protein bound to AIP-4 showing the numerous intramolecular forces</figcaption>
 							</figure>
 							<figure>
-								<img src="images/active_site.png">
+								<img src="images/Active_site.png">
 								<figcaption>Designed protein active site with AIP-4 and mutations colored</figcaption>
 							</figure>
 						<h2 id="assayII">ASSAY</h2>
 							<p>If the designed protein is successful, it will hydrolyze the autoinducer at the thioester linkage and produce free cysteine with exposed thiol groups. To determine the protein’s activity, we utilized Ellman’s Reagent. This reagent enables us to measure the concentration of sulfur in solution with UV absorbance. The reaction that Ellman’s Reagent undergoes in the presence of sulfur can be seen below.</p>
 							<figure>
-								<img src="images/ellmans.png">
+								<img src="images/Ellmans.png">
 							</figure>
 							<p>Initial results are promising. As the figure shows, when the thiol absorbance of AIP and the protein are measured individually, the combined absorbance is 0.326. However when the two are measured simultaneously (interacting with each other), the absorbance rises to 0.367. This appears to indicate that the protein hydrolyzed the peptide and increased the sulfur concentration.</p>
 							<figure>
-								<img src="images/absorbance.png">
+								<img src="images/Absorbance.png">
 							</figure>
 						<h2 id="future">FUTURE</h2>
 							<p>The designed protein contains a total of seven cysteine residues. While these should be accounted for with the background absorbance measurements, it would be ideal to remove this absorbance by mutating the residues to another amino acid with similar properties, such as serine. Additionally, further mutations to residues can be used to enhance the binding of the protein with the various types of autoinducers to generate specificity for different strains of bacteria.</p>
