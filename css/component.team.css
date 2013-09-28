@@ -45,7 +45,7 @@
 .subjects h1:after,
 .subjects h2:before {
     content:" ";
-    background:url(../images/ribbon-left.png);
+    background:url(http://2013.igem.org/wiki/images/7/79/Ribbon-left.png);
     display:block;
     width:10px;
     height:10px;
@@ -56,7 +56,7 @@
     z-index:-1;
 }
 .subjects h1:after {
-	background: url(../images/ribbon-right.png);
+	background: url(http://2013.igem.org/wiki/images/3/33/Ribbon-right.png);
 	right:0;
 	left:auto;
 }
@@ -71,7 +71,7 @@
 	box-shadow:-2px 2px 0 rgba(0,0,0,0.1);
 }
 .subjects h2:nth-of-type(odd):before{
-	background:url(../images/ribbon-right.png);
+	background:url(http://2013.igem.org/wiki/images/3/33/Ribbon-right.png);
 	right:0;
 	left:auto;
 }
